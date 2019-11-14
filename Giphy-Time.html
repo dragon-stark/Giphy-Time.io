@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>It's Giphy time</title>
+	</head>
+
+	<body>
+		<img
+			src="http://media.giphy.com/media/H6DsRPlp0zMUE/giphy.gif/200_s.gif"
+			data-still="http://media.giphy.com/media/H6DsRPlp0zMUE/giphy.gif/200_s.gif"
+			data-animate="http://media.giphy.com/media/H6DsRPlp0zMUE/giphy/200.gif"
+			data-state="still"
+			class="gif"
+		/>
+		<img
+			src="https://media.giphy.com/media/HQGzdiNhg52oM/giphy.gif/200_s.gif"
+			data-still="https://media.giphy.com/media/HQGzdiNhg52oM/giphy.gif/200_s.gif"
+			data-animate="https://media.giphy.com/media/HQGzdiNhg52oM/giphy.gif/200.gif"
+			data-state="still"
+			class="gif"
+		/>
+		<img
+			src="https://media.giphy.com/media/LwHe6XST1XVNATGH2n/giphy.gif/200_s.gif"
+			data-still="https://media.giphy.com/media/LwHe6XST1XVNATGH2n/giphy.gif/200_s.gif"
+			data-animate="https://media.giphy.com/media/LwHe6XST1XVNATGH2n/giphy.gif/200.gif"
+			data-state="still"
+			class="gif"
+		/>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			$('.gif').on('click', function() {
+				// The attr jQuery method allows  to get  the value of any attribute on our HTML element
+				var state = $(this).attr('data-state');
+				// If the clicked image's state is still, update its src attribute to what its data-animate value is.
+				// Then, set the image's data-state to animate
+				// Else set src to the data-still value
+				if (state === 'still') {
+					$(this).attr('src', $(this).attr('data-animate'));
+					$(this).attr('data-state', 'animate');
+				} else {
+					$(this).attr('src', $(this).attr('data-still'));
+					$(this).attr('data-state', 'still');
+				}
+			});
+		</script>
+	</body>
+</html>
