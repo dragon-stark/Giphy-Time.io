@@ -27,22 +27,39 @@
 			data-state="still"
 			class="gif"
 		/>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><style>
+			.container {
+				color: red;
+				size: 1.2em;
+				background-color: darkgreen;
+
+			}
+		</style>
+
+		<body>
+			<!-- buttons -->
+			<div class="input-group-prepend">
+				<button class="btn gif-buttons" id="container addGif" type="text">Happiness Search</div>
+			<div class="container gif-view"></div>
+			<input type="text" class="form-control-control" placeholder="" class="topics"></div>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+			<script src="Ajax-06-HW.js"> </script>
 		<script type="text/javascript">
-			$('.gif').on('click', function() {
+			$(".gif").on("click", function() {
 				// The attr jQuery method allows  to get  the value of any attribute on our HTML element
-				var state = $(this).attr('data-state');
+				var state = $(this).attr("data-state");
 				// If the clicked image's state is still, update its src attribute to what its data-animate value is.
 				// Then, set the image's data-state to animate
 				// Else set src to the data-still value
-				if (state === 'still') {
-					$(this).attr('src', $(this).attr('data-animate'));
-					$(this).attr('data-state', 'animate');
+				if (state === "still") {
+					$(this).attr("src", $(this).attr("data-animate"));
+					$(this).attr("data-state", "animate");
 				} else {
-					$(this).attr('src', $(this).attr('data-still'));
-					$(this).attr('data-state', 'still');
+					$(this).attr("src", $(this).attr("data-still"));
+					$(this).attr("data-state", "still");
 				}
 			});
 		</script>
+		<link rel="stylesheet" href="assets/Ajax-06-HW.js" />
 	</body>
 </html>

@@ -1,16 +1,20 @@
-$(document).ready(function () {
+$(document).ready(function ()
+{
 
   var topics = ["goats", "memes", "lifeHacks"]
 
-  function displayGifButtons () {
+  function displayGifButtons ()
+  {
     $(".gif-buttons").empty();
     for (var i = 0; i < topics.length; i++) {
       var createButton = $("<button>");
     }
   }
   console.log(createButton);
-  function addNewButton () {
-    $("#addGif").on("click", function () {
+  function addNewButton ()
+  {
+    $("#addGif").on("click", function ()
+    {
       var topics = $("#topicInput").val().trim()
       if (topics === "") {
         // Rejects empty buttons//
@@ -23,7 +27,8 @@ $(document).ready(function () {
   }
 
 
-  function displayGifs () {
+  function displayGifs ()
+  {
     var topics = $(this).attr("data-name");
     console.log(topics)
 
@@ -35,10 +40,11 @@ $(document).ready(function () {
     $.ajax({
       url: queryURL,
       method: "GET"
-    }).then(function (response) {
+    }).then(function (response)
+    {
       console.log(response)
       $(".gif-view").empty();
-      // to show results from url
+      //  show results from url
       var results = response.data;
       if (results === " ") {
         alert("oops, I'm blank")
@@ -70,7 +76,8 @@ $(document).ready(function () {
 
 
   $(document).on("click", ".topics", displayGifs);
-  $(document).on("click", ".image", function () {
+  $(document).on("click", ".image", function ()
+  {
     var state = $(this).attr('data-state');
     if (state === 'still') {
       $(this).attr('src', $(this).data('animate'));
