@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Giphy-Time!</title>
+	</head>
+	<body>
+		<button data-goat="Funny Goats">See the Magic!</button>
+
+		<div id="see-gifs-here"></div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.map"></script>
+		<script type="text/javascript">
+			// cRcOio71JuJZGduimOTw0SJpB7Nn5Owv
+			$("button").on("click", function() {
+				var goat = $(this).attr("data-goat");
+
+				var queryURL =
+					"https://api.giphy.com/v1/gifs/search?q=" +
+					goats +
+					"&api_key=cRcOio71JuJZGduimOTw0SJpB7Nn5Owv&limit=10";
+
+				$.ajax({
+					url: queryURL,
+					method: "GET"
+				}).then(function(response) {
+					var results = response.data;
+
+					for (var i = 0; i < results.length; i++) {
+						if (results[i].rating !== "r" && results[i].rating !== "pg-13") {
+							var gifDiv = $("<div>");
+							var rating = results[i].rating;
+
+							var p = $("<p>").text("Rating: " + rating);
+
+							var goatImage = $("<img>");
+
+							goatImage.attr("src", results[i].images.fixed_height.url);
+
+							gifDiv.append(p);
+							gifDiv.append(goatImage);
+
+							$("#see-gifs-here").prepend(gifDiv);
+						}
+					}
+				});
+			});
+		</script>
+	</body>
+</html>
