@@ -26,7 +26,6 @@ $(document).ready(function ()
     });
   }
 
-
   function displayGifs ()
   {
     var topics = $(this).attr("data-name");
@@ -66,10 +65,6 @@ $(document).ready(function ()
       }
     });
   }
-
-
-  // API Gyphy key
-  // mcD2gwFTt1336mFt9p0QG0S2vGOMhqBP
 
   displayGifButtons();
   addNewButton();
