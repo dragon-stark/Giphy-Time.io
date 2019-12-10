@@ -4,4 +4,4 @@
 
 ### Project Link
 
-[GifTastic!](https://dragon-stark.github.io/Giphy-Time.io/).
+[GifTastic!](https://dragon-stark.github.io/Giphy-Time.io/)
