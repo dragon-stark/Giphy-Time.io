@@ -1,5 +1,7 @@
-# GifTastic.io
+# GifTastic!
 
 **Manipulate Gifs by starting and stopping their animation with a simple click.**
-### Project Link 
+
+### Project Link
+
 [GifTastic!](https://dragon-stark.github.io/Giphy-Time.io/).
