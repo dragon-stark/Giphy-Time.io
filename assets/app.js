@@ -2,7 +2,7 @@ $(document).ready(function ()
 {
   var topics = ["crazy animals", "cute animals", "funny animals", "cuddly pets", "hilarious critters"];
 
-
+  // function to make buttons and add to page
   function displayButtons (buttonDisplay, addClass, gifArea)
   {
     // clear buttons for additional searches

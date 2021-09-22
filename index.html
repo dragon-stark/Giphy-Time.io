@@ -20,7 +20,7 @@
     <style>
       body {
         font-family: "Happy Monkey", cursive;
-        display: relative;
+        {% comment %} display: relative; {% endcomment %}
         background-color: rgb(235, 231, 231);
       }
       button {
@@ -32,7 +32,7 @@
         border-radius: 9px;
       }
     </style>
-    <title>Giphy Time!</title>
+    <title>Giphy Time Fun!</title>
   </head>
   <body>
     <div class="container">
@@ -47,7 +47,7 @@
         <div class="col-xs-12 col-md-3 col-lg-3 col-xl-3">
           <form>
             <div class="form-group">
-              <label for="addTopic">This app helps you find your favorite animals gifs. <br> When your search results show on the screen they will be deactivated to avoid distractions.  If you would like to see the giphy all you have to do is click the image and it will run.  Click again to stop the animation. </label>
+              <label for="addTopic">Do you like animals gifs? <br> Search for any animal giphy and you will see them here </label>
               <input
                 type="text"
                 class="form-control"
@@ -55,7 +55,7 @@
                 placeholder=""
               />
             </div>
-            <button type="submit" id="submitButton">Magic Search</button>
+            <button type="submit" id="submitButton">Animal Search</button>
           </form>
         </div>
       </div>
